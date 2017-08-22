@@ -39,5 +39,17 @@ namespace Grades.Test
             Assert.AreEqual(85.16, result.AverageGrade, 0.01);
         }
 
+        [TestMethod]
+        public void ComputesNotLowestGrade()
+        {
+            GradeBook book = new GradeBook();
+            book.AddGrades(91);
+            book.AddGrades(89.5f);
+            book.AddGrades(75);
+
+            GradeStatistics result = book.ComputeStatistics();
+            Assert.AreNotSame(5, result.LowestGrade);
+        }
+
     }
 }
