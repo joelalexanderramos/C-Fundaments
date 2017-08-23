@@ -1,0 +1,27 @@
+- Buscar: Microsoft Certifications
+- Hacerlo en Ingles
+- Ver: en-us/Exam-List.aspx
+- www.microsoft.com/es-es/train_cert
+	Certifications & exams > App Builder > Aplicacion web
+
+www.microsoft.com/es-mx/learning/mcsa-web-applications-certification.aspx
+
+https://www.microsoft.com/en-us/learning/browse-all-certifications.aspx?technology=Web%20applications
+
+- Introducción a C#: TI Capacitacion
+
+- 1) MCSA, 2) MCSD
+
+- Curso de Pluralsight (el mejor): https://app.pluralsight.com/paths/skill/csharp
+
+- Otro bueno: Programming in C# Jump Start
+
+- https://ticapacitacion.com/curso/certcs/
+
+Programming C#
+soporte@mail.ticapacitacion.com
+
+
+DELEGADOS:
+- Action: Action A = ShowMessage;
+- Function: Func<> F = ShowMessage

@@ -6,20 +6,22 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            GradeBook book = new GradeBook();
+            int x1 = 100;
+            int x2 = x1;
 
-            book.AddGrades(91);
-            book.AddGrades(89.5f);
-            book.AddGrades(75);
+            x1 = 4;
 
-            GradeStatistics stats = book.ComputeStatistics();
+            //GradeBook book = new GradeBook();
 
-            Console.WriteLine(stats.AverageGrade);
-            Console.WriteLine(stats.HighestGrade);
-            Console.WriteLine(stats.LowestGrade);
+            //book.AddGrades(91);
+            //book.AddGrades(89.5f);
+            //book.AddGrades(75);
 
+            //GradeStatistics stats = book.ComputeStatistics();
+
+            //Console.WriteLine(stats.AverageGrade);
+            //Console.WriteLine(stats.HighestGrade);
+            //Console.WriteLine(stats.LowestGrade);
         }
     }
-
-
 }
