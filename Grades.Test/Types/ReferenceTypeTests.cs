@@ -15,6 +15,7 @@ namespace Grades.Test.Types
             AddGrades(grades);
 
             Assert.AreEqual(89.1f, grades[1]);
+            
         }
 
         private void AddGrades(float[] grades)
