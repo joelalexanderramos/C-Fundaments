@@ -99,7 +99,6 @@ namespace Grades.Test.Types
             
             //b1 = new GradeBook();
             b1.Name = "Joel Ramos";
-
             Assert.AreEqual(b1.Name, b2.Name);
 
         }

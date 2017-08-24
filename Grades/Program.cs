@@ -6,10 +6,7 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            int x1 = 100;
-            int x2 = x1;
-
-            x1 = 4;
+            
 
             //GradeBook book = new GradeBook();
 

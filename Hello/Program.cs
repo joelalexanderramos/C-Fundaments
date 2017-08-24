@@ -6,31 +6,47 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter names: ");
-            string[] names = Console.ReadLine().Split(' ');
+            //Console.WriteLine("Please enter names: ");
+            //string[] names = Console.ReadLine().Split(' ');
 
-            int hoursSleep;
+            //int hoursSleep;
 
-            Console.WriteLine("Hours sleep: ");
-            int.TryParse(Console.ReadLine(), out hoursSleep);
+            //Console.WriteLine("Hours sleep: ");
+            //int.TryParse(Console.ReadLine(), out hoursSleep);
 
-            #region Hours of Sleep
-            if (hoursSleep > 8)
-                Console.WriteLine("You are well rested");
-            else
-                Console.WriteLine("You need more sleep");
-            #endregion
+            //#region Hours of Sleep
+            //if (hoursSleep > 8)
+            //    Console.WriteLine("You are well rested");
+            //else
+            //    Console.WriteLine("You need more sleep");
+            //#endregion
 
-            #region Names split
-            if (names.Length > 0)
-                foreach (var arg in names)
-                {
-                    Console.WriteLine(String.Format("Hello, {0}", arg.ToString()));
-                }
+            //#region Names split
+            //if (names.Length > 0)
+            //    foreach (var arg in names)
+            //    {
+            //        Console.WriteLine(String.Format("Hello, {0}", arg.ToString()));
+            //    }
 
-            else
-                Console.WriteLine("Hello, world"); 
-            #endregion
+            //else
+            //    Console.WriteLine("Hello, world"); 
+            //#endregion
+
+            Action<int> msg = Message;
+
+            Number N = new Number();
+            var List = N.GetNumber(10, msg);
+
+            foreach (var n in List)
+            {
+                Console.WriteLine(n);
+            }
+
+        }
+
+        static void Message(int n)
+        {
+            Console.WriteLine($"Procesando {n} ...");
         }
     }
 }
