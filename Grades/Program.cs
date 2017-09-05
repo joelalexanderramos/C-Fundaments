@@ -7,13 +7,22 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            IGradeTracker book = CreateGradeBook();
-            
-            //GetBookName(book);
-            AddGrades(book);
-            SaveGrades(book);
-            WriteResults(book);
+            //IGradeTracker book = CreateGradeBook();
+
+            ////GetBookName(book);
+            //AddGrades(book);
+            //SaveGrades(book);
+            //WriteResults(book);
+
+            string apple = "apple";
+            string pear = "pear";
+
+            Console.WriteLine(apple.CompareTo(pear));
+            Console.WriteLine(pear.CompareTo(apple));
+            Console.WriteLine(apple.CompareTo(apple));
         }
+
+        
         
 
         private static IGradeTracker CreateGradeBook()
