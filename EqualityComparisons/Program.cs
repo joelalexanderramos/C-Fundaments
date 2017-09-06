@@ -10,7 +10,20 @@ namespace EqualityComparisons
     {
         static void Main(string[] args)
         {
+            string[] list =
+            {
+                "orange",
+                "banana",
+                "apple",
+                "pear"
+            };
 
+            Array.Sort(list);
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
 
 
             //Console.WriteLine("Operator: " + AreIntsEqualOp(3,3));
