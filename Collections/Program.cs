@@ -7,20 +7,39 @@ namespace Collections
     {
         static void Main(string[] args)
         {
-            var primeMinisters = new SortedList<string, PrimeMinister>(StringComparer.InvariantCultureIgnoreCase)
+            var cities = new HashSet<string>
+                (new UncasedStringEquialityComparer())
             {
-                { "JC" , new PrimeMinister("James Callaghan", 1976)},
-                { "MT" , new PrimeMinister("Margaret Thatcher", 1979)},
-                { "TB" , new PrimeMinister("Tony Blair", 1997)}
-        };
-            // Sorted Dictionary
-            primeMinisters.Add("JM", new PrimeMinister("John Major", 1990));
-            
+                "New York", "Manchester", "Sheffield", "Paris"
+            };
 
-            foreach (var pm in primeMinisters)
+            //cities.Add("SHEFFIELD");
+            //cities.Add("BEIJING");
+
+            // Intercept
+            string[] citiesUNK = { "Sheffield", "Ripon", "Truro", "Manchester" };
+
+            cities.IntersectWith(citiesUNK);
+
+            foreach (var city in cities)
             {
-                Console.WriteLine(pm);
+                Console.WriteLine(city);
             }
+
+            //var primeMinisters = new SortedList<string, PrimeMinister>(StringComparer.InvariantCultureIgnoreCase)
+            //{
+            //    { "JC" , new PrimeMinister("James Callaghan", 1976)},
+            //    { "MT" , new PrimeMinister("Margaret Thatcher", 1979)},
+            //    { "TB" , new PrimeMinister("Tony Blair", 1997)}
+            //};
+            //// Sorted Dictionary
+            //primeMinisters.Add("JM", new PrimeMinister("John Major", 1990));
+
+
+            //foreach (var pm in primeMinisters)
+            //{
+            //    Console.WriteLine(pm);
+            //}
 
             // ReadOnly Dictionary
             //var psmReadOnly = new ReadOnlyDictionary<string, PrimeMinister>(primeMinisters);
@@ -31,7 +50,7 @@ namespace Collections
             //}
 
             // ignoring case
-            Console.WriteLine(primeMinisters["tb"]);
+            //Console.WriteLine(primeMinisters["tb"]);
 
             //// adding
             //primeMinisters.Add("GB", new PrimeMinister("Gordon Brown", 2007));
@@ -70,6 +89,19 @@ namespace Collections
             //{
             //    Console.WriteLine(pm.Key + ",    " + pm.Value);
             //}
+        }
+
+        class UncasedStringEquialityComparer : IEqualityComparer<string>
+        {
+            public bool Equals(string x, string y)
+            {
+                return x.ToUpper() == y.ToUpper();
+            }
+
+            public int GetHashCode(string obj)
+            {
+                return obj.ToUpper().GetHashCode();
+            }
         }
 
 
